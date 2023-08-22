@@ -1,0 +1,61 @@
+<app-spiner *ngIf="loading" ></app-spiner>
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            
+            <mat-card-subtitle>{{operacion}}</mat-card-subtitle>
+        </mat-card-header>
+        
+        <mat-card-content>
+           <form [formGroup]="fGroup" (ngSubmit)="agregarEditarMascota()" >
+            <mat-grid-list cols="2" rowHeight="80px">
+                <mat-grid-tile [colspan]="2" >
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input  formControlName="nombre" matInput>
+                      
+                      </mat-form-field>
+
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Raza</mat-label>
+                        <input formControlName="raza" matInput>
+                      
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Edad</mat-label>
+                        <input (input)="onInputChange($event)" type="number" formControlName = "edad" matInput>
+                      
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Color</mat-label>
+                        <input formControlName = "color" matInput>
+                      
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Peso</mat-label>
+                        <input (input)="onInputChange($event)"  type="number" formControlName ="peso" matInput>
+                      
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" >
+                    <button routerLink="/listado-mascotas" mat-stroked-button color="primary">Volver</button>
+                    <button [disabled]="fGroup.invalid" type="submit" mat-stroked-button color="accent">Guardar</button>
+
+                </mat-grid-tile>
+              </mat-grid-list>
+
+           </form>
+              
+        </mat-card-content>
+       
+        
+    </mat-card>
+</div>

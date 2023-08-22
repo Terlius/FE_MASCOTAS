@@ -1,0 +1,74 @@
+
+table {
+    width: 100%;
+  }
+
+.container {
+
+    margin: 0 20%;
+
+}
+
+
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 10%;
+  }
+
+  .search,
+.edit,
+.delete {
+  font-size: 24px;
+}
+
+.search:hover,
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
+}
+
+.search {
+  color: #3f51b5; /* Color azul para el icono de búsqueda */
+}
+
+.edit {
+  color: #fbc02d; /* Color amarillo para el icono de edición */
+}
+
+.delete {
+  color: #f44336; /* Color rojo para el icono de eliminación */
+}
+
+
+.boton-agregar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff4081;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-agregar:hover {
+    background-color: #f50057;
+  }
+  
+  .icono-agregar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+ 
